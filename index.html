@@ -623,7 +623,7 @@ function socials(){const c=cfg();return [['instagram','ig','Instagram'],['tiktok
 function renderPublic(){
   const c=cfg();const sv=servicios().filter(s=>s.activo!==false);const bs=barberos().filter(b=>b.activo!==false);
   const prods=S.productos.filter(p=>p.visible!==false&&Number(p.stock)>0);
-  const nav=[['top','home','Inicio'],['sec-servicios','scissors','Servicios'],['sec-barberos','users','Barberos'],['sec-reservar','cal','Agendar'],['sec-miscitas','user','Mi Cuenta']];
+  const nav=[['top','home','Inicio'],['sec-servicios','scissors','Servicios'],['sec-reservar','cal','Agendar'],['sec-miscitas','user','Mi Cuenta']];
   return `
   <header class="lb-top" id="top"><div class="in-w">
     <button class="lg" data-act="goto" data-t="top" aria-label="Inicio"><img src="${IMG.logo}" alt="${esc(c.nombre)}"></button><span class="vsep"></span>
@@ -641,14 +641,6 @@ function renderPublic(){
     <div class="lb-grid">${sv.map(s=>svcCard(s,{act:'pickSvc',scroll:1,btn:'Reservar',sel:B.servicioId===s.id})).join('')}</div>
   </div></section>
 
-  <section class="lb-sec" style="padding-top:0"><div class="lb-row3">
-    <div class="lbcard lb-barb" id="sec-barberos" style="background-image:url(${IMG.barberos})"><div class="txt"><img src="${IMG.t_barb}" alt="Nuestros barberos" style="width:170px;display:block"><div class="mut">Expertos en estilo urbano</div>
-      <div class="bl">${bs.map(b=>`<button class="chip" data-act="agendarCon" data-id="${b.id}" title="Agendar con ${esc(b.nombre)}"><span class="avatar" style="width:22px;height:22px;font-size:9px;background:${b.color}">${esc(initials(b.nombre))}</span>${esc(b.nombre)}</button>`).join('')}</div>
-      <button class="btn gold sm" data-act="verBarberos" style="align-self:flex-start;margin-top:auto">Conoce más ${ico('arrow')}</button></div>
-</div>
-    <div class="lbcard lb-agenda">${quickAgenda()}<div class="dec" style="background-image:url(${IMG.mini})"></div></div>
-    <div class="lbcard lb-cuenta" style="background-image:url(${IMG.cuenta})"><h3>${ico('user')} MI CUENTA</h3><p class="mut">Gestiona tus citas, revisa tu historial y mucho más.</p><button class="btn gold sm" data-act="goto" data-t="sec-miscitas" style="align-self:flex-start;margin-top:auto">Ingresar ${ico('arrow')}</button></div>
-  </div></section>
 
   <section class="lb-sec" id="sec-reservar"><div class="lb-h">${ico('crown','cr')}<div><small>RESERVA EN LÍNEA</small><h2>Agenda tu cita</h2></div><p>Tu turno se confirma al recibir el abono.</p></div>
     ${renderWizard()}
