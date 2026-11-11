@@ -1,4 +1,4 @@
-# Barber Pro · Gestión de barbería (demostración)
+# The Latin Brothers Barber Shop · Reservas y gestión (demostración)
 
 Aplicativo web para barberías con dos partes:
 
