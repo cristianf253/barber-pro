@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Latin Brothers Barber Shop · Reservas y gestión</title>
+<title>The Brothers Barber Shop · Reservas y gestión</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Permanent+Marker&family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
@@ -269,7 +269,7 @@ footer.pub{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font
   .content{padding:14px}
 }
 
-/* ===== Tema The Latin Brothers ===== */
+/* ===== Tema The Brothers ===== */
 :root{--bg:#060606;--bg2:#0d0d0d;--panel:#111111;--card:#151515;--card2:#1c1b19;--line:#2a2722;--line2:#3b352b;--gold:#f2b632;--gold2:#ffd15c;--goldd:#b9830f;--tx:#f3f1ec;--mut:#a7a094;--mut2:#6f6a60}
 h1,h2,h3,h4,.btn,.nav button,.steps div,.chip,.kpi b,.fin-big,.ph h2,.card-h h3,.tile b,.day b,.slot,.mdl-h h3,.ticket .code{font-family:Oswald,Montserrat,sans-serif}
 .btn{font-weight:600;letter-spacing:.02em;font-size:14px}
@@ -473,7 +473,7 @@ const avColor=s=>AV_COLORS[[...String(s)].reduce((a,c)=>a+c.charCodeAt(0),0)%AV_
 const avatar=(n,size=38,col)=>`<div class="avatar" style="width:${size}px;height:${size}px;background:${col||avColor(n)}">${esc(initials(n))}</div>`;
 
 /* ================= valores por defecto ================= */
-const DEF_CFG={nombre:'The Latin Brothers Barber Shop',eslogan:'Más que un corte, es un estilo de vida.',instagram:'',tiktok:'',facebook:'',whatsapp:'',apertura:'09:00',cierre:'20:00',descansoIni:'13:00',descansoFin:'14:00',dias:[1,2,3,4,5,6],intervalo:15,diasReserva:14,abonoPct:30,abonoMin:10000,autoConfirmar:false,nequi:'300 000 0000',daviplata:'300 000 0000',banco:'Bancolombia Ahorros 000-000000-00',titular:'The Latin Brothers Barber Shop',pinAdmin:'1234',stockMin:3,direccion:'Calle principal #00-00',telefono:'300 000 0000',politica:'El abono reserva tu turno y se descuenta del valor total del servicio. No es reembolsable si cancelas con menos de 3 horas de anticipación o no asistes.'};
+const DEF_CFG={nombre:'The Brothers Barber Shop',eslogan:'Más que un corte, es un estilo de vida.',instagram:'',tiktok:'',facebook:'',whatsapp:'',apertura:'09:00',cierre:'20:00',descansoIni:'13:00',descansoFin:'14:00',dias:[1,2,3,4,5,6],intervalo:15,diasReserva:14,abonoPct:30,abonoMin:10000,autoConfirmar:false,nequi:'300 000 0000',daviplata:'300 000 0000',banco:'Bancolombia Ahorros 000-000000-00',titular:'The Brothers Barber Shop',pinAdmin:'1234',stockMin:3,direccion:'Calle principal #00-00',telefono:'300 000 0000',politica:'El abono reserva tu turno y se descuenta del valor total del servicio. No es reembolsable si cancelas con menos de 3 horas de anticipación o no asistes.'};
 const DEF_SERV=[
  {id:'s1',nombre:'Corte',duracion:30,precio:20000,icono:'scissors',activo:true,orden:1,desc:'Estilo en cada detalle'},
  {id:'s2',nombre:'Corte + Barba',duracion:50,precio:30000,icono:'beard',activo:true,orden:2,desc:'Corte y perfilado de barba'},

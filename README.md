@@ -1,4 +1,4 @@
-# The Latin Brothers Barber Shop · Reservas y gestión (demostración)
+# The Brothers Barber Shop · Reservas y gestión (demostración)
 
 Aplicativo web para barberías con dos partes:
 
